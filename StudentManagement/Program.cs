@@ -11,7 +11,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-//haloo
+
 app.UseHttpsRedirection();
 
 var summaries = new[]
