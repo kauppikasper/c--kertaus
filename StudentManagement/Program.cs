@@ -9,11 +9,9 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 // Alkuperäinen tapa (Swagger näkyy vain Development-tilassa):
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 
