@@ -7,10 +7,14 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-// Alkuperäinen tapa (Swagger näkyy vain Development-tilassa):
+// Poista tämä ehto, jos haluat Swaggerin myös Azureen
+// if (app.Environment.IsDevelopment())
+
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseHttpsRedirection();
+app.Run();
 
 
 app.UseHttpsRedirection();
